@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Saya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    html {
+      scroll-padding-top: 120px;
+    }
+
+    body {
+      background: linear-gradient(to right, #f0f4f8, #dbeafe);
+      color: #1f2937;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(30, 58, 138, 0.7);
+      backdrop-filter: blur(8px);
+      color: white;
+      padding: 1rem 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
+    }
+
+    header p {
+      font-size: 1rem;
+    }
+
+    .profile-img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      margin-bottom: 0.8rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fde047;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      scroll-margin-top: 120px;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #1e293b;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+    }
+
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .skills li {
+      background: linear-gradient(to right, #38bdf8, #6366f1);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      list-style: none;
+      font-weight: 500;
+      color: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+      color: #0f172a;
+    }
+
+    .project-card p {
+      margin-bottom: 0.8rem;
+      color: #475569;
+      text-align: justify;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 0.3rem;
+      margin-right: 1rem;
+      padding: 0.4rem 0.8rem;
+      background-color: #3b82f6;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: background-color 0.3s;
+    }
+
+    .project-card a:hover {
+      background-color: #2563eb;
+    }
+
+    footer {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+    }
+
+    .about p,
+    .contact p,
+    .project-card p {
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="aset/foto.png" alt="Foto Profil Koling" class="profile-img">
+    <h1>Halo, Saya Maulina Ayu S</h1>
+    <p>Front-end Developer | UI/UX Design |Content Creator| Copy Writing</p>
+    <nav>
+      <a href="#about">Tentang</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Proyek</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="about">
+      <h2>Tentang Saya</h2>
+      <p>Saya adalah mahasiswa Institut Teknologi Sumatera dengan program studi Teknik Informatika. Saya memiliki 
+        minat yang besar dalam bidang UI/UX Design dan Front-End Development. Ketertarikan ini mendorong saya 
+        untuk terus belajar dan mengembangkan keterampilan dalam merancang antarmuka yang interaktif, responsif, 
+        dan user-friendly. Selama masa studi, saya telah terlibat dalam beberapa proyek yang memungkinkan saya 
+        untuk menerapkan pengetahuan yang telah saya pelajari serta mengasah keterampilan teknis dan kreativitas 
+        dalam desain dan pengembangan web.</p>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Python</li>
+        <li>React</li>
+        <li>Next.js</li>
+        <li>UI/UX</li>
+        <li>Editor Video</li>
+        <li>Copy Writing</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Proyek</h2>
+      <div class="project-card">
+        <h3>Aplikasi Website Kuy-Makan</h3>
+        <p> Aplikasi Website Kuy Makan adalah sebuah website yang responsif dan interaktif dengan menggunakan React.js</p>
+        <a href="https://github.com/ayuputrr/uts_pemrograman_web_122140080" target="_blank">Lihat Kode</a>
+        <a href="https://kuy-makan.vercel.app/home" target="_blank">Lihat Demo</a>
+      </div>
+      </div>
+      <div class="project-card">
+        <h3>Website Informasi Desa</h3>
+        <p>Website informasi desa ini dibuat pada desa pulau benawang kabupaten tanggamus, yang merupakan salah satu desa terpencil yang ada ditanggamus. Pada pembuatan website informasi ini saya berperan sebagai Front-End Developer</p>
+        <a href="https://github.com/ayuputrr/Website-Informasi-Pulau-Benawang" target="_blank">Lihat Kode</a>
+        <a href="https://website-informasi-pulau-benawang.vercel.app" target="_blank">Lihat Demo</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <h3>Website Posyandu</h3>
+      <p>Saya pernah berperan menjadi Front End Development pada sebuah proyek pembuatan website untuk posyandu desa sabah balau. 
+        Dengan include beberapa fitur seperti perhitungan gizi, artikel tentang kesehatan, kontak person, video pengenalan posyandu kartika 
+        sabah balau.</p>
+      <a href="https://github.com/MegumenZ/TubesKSI" target="_blank">Lihat Kode</a>
+      <a href="https://posyandukartika.vercel.app" target="_blank">Lihat Demo</a>
+    </div>
+    <div class="project-card">
+        <h3>UI/UX Design Website Konsultasi Mental</h3>
+        <p>Saya pernah berperan dalam pembuatan desain UI/UX dalam pengembangan website konsultasi mental yang dibuat dalam proyek Interaksi Manusia 
+            dan Komputer</p>
+        <a href="https://www.figma.com/proto/JjRfPnzZEVgLBTNWD9cbZ4/UI%2FUX_IMK_KEL8?nodeid=613-6360&p=f&t=eOp4EOaV1H6IA1dj-1&scaling=scale-down&content-scaling=fixed&page-id=613%3A5637&starting-point-nodeid=613%3A6073&show-proto-sidebar=1" target="_blank">Lihat Demo</a>
+      </div>
+      <div class="project-card">
+        <h3>UI/UX Design Website Musik </h3>
+        <p> Saya pernah berperan dalam pembuatan desain UI/UX dalam pengembangan website musik yang dibuat dalam proyek Latihan 
+            Keprofesian Kepemimpinan Organisasi.</p>
+        <a href="https://www.figma.com/proto/TK7gyTjsgA3HD0XboOkzHK/Untitled?node-id=1-358&p=f&t=h1Ye8ZJ4aaa64hB8-1&scaling=scaledown&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A946" target="_blank">Lihat Demo</a>
+      </div>
+    </div>
+    </div>
+      <div class="project-card">
+        <h3>Content Creator Fanbase </h3>
+        <p>  Saya pernah menjadi staff Editor Video disalah satu disebuah akun fanbase yang cukup besar, namun saya sudah tidak lagi memegang posisi tersebut.</p>
+        <a href="https://www.tiktok.com/@fluxmee?_t=ZS-8vMKhM921ZA&_r=1" target="_blank">Lihat Profil</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <h3>Penulis Artikel </h3>
+      <p> Saya pernah menulis beberapa artikel tentang kesehatan dand tentang desa yang dijadikan sebuah informasi yang dapat diakses oleh banyak orang. </p>
+      <a href="https://medium.com/@tria.122450062/mengenal-pekon-pulau-benawang-menyusuri-kearifan-lokal-di-tengah-pesona-alam-lampung-ddc11e370895" target="_blank">Artikel Desa</a>
+      <a href="https://medium.com/@posyandu2kartika/slogan-posyandu-4ab9ca2f35dd" target="_blank">Stunting</a>
+      <a href="https://medium.com/@posyandu2kartika/makanan-bergizi-balita-c72675ce3d10" target="_blank">Makanan Bergizi Anak</a>
+      <a href="https://medium.com/@posyandu2kartika/makanan-bergizi-ibu-hamil-06dd71b39f3e" target="_blank">Makanan Bergizi Ibu Hamil</a>    
+    </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Kontak</h2>
+        <p>Email: 
+          <a href="mailto:maulinaayusyahputri@gmail.com">
+            maulinaayusyahputri@gmail.com
+          </a>
+        </p>
+        <p>LinkedIn: 
+          <a href="https://www.linkedin.com/in/maulinaayusyahputri" target="_blank" rel="noopener noreferrer">
+            https://www.linkedin.com/in/maulinaayusyahputri
+          </a>
+        </p>
+        <p>Instagram: 
+            <a href="mailto:https://www.instagram.com/myysp_?igsh=MWpka2g2Nmp6OHljOQ==">
+              @myysp_
+            </a>
+          </p>
+      </section>
+      
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Maulina Ayu S. All rights reserved.</p>
+  </footer>
+</body>
+</html>
