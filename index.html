@@ -14,18 +14,13 @@
       scroll-behavior: smooth;
     }
 
-    html {
-      scroll-padding-top: 140px;
+    body {
+      background: linear-gradient(135deg, #a855f7, #6b21a8, #1e1b4b, #000000);
+      background-size: 400% 400%;
+      animation: gradientFlow 20s ease infinite;
+      color: #f1f5f9;
+      overflow-x: hidden;
     }
-
-  body {
-  background: linear-gradient(135deg, #a855f7, #6b21a8, #1e1b4b, #000000);
-  background-size: 400% 400%;
-  animation: gradientFlow 20s ease infinite;
-  color: #f1f5f9;
-  overflow-x: hidden;
-  padding-top: 140px;
-}
 
     @keyframes gradientFlow {
       0% { background-position: 0% 50%; }
@@ -34,16 +29,11 @@
     }
 
     header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
       background: rgba(76, 29, 149, 0.95);
       backdrop-filter: blur(10px);
       color: white;
-      padding: 1rem 1rem;
+      padding: 2rem 1rem 2.5rem;
       text-align: center;
-      z-index: 1000;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 
@@ -83,7 +73,7 @@
     }
 
     section {
-      padding: 3rem 2rem;
+      padding: 3.5rem 2rem;
       max-width: 1000px;
       margin: auto;
     }
@@ -187,6 +177,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <img src="aset/foto.png" alt="Foto Profil Koling" class="profile-img">
     <h1>Halo, Saya Maulina Ayu S</h1>
@@ -199,7 +190,7 @@
     </nav>
   </header>
 
- <main>
+  <main>
     <section id="about" class="about">
       <h2>Tentang Saya</h2>
       <p>Saya adalah mahasiswa Institut Teknologi Sumatera dengan program studi Teknik Informatika. Saya memiliki 
@@ -230,7 +221,7 @@
       </ul>
     </section>
 
-     <section id="projects" class="projects">
+   <section id="projects" class="projects">
   <h2>Proyek</h2>
 
   <div class="project-card">
@@ -305,8 +296,7 @@
     <br />
     <p>&copy; 2025 Maulina Ayu S. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
-
-
 
