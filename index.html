@@ -15,16 +15,17 @@
     }
 
     html {
-      scroll-padding-top: 120px;
+      scroll-padding-top: 140px;
     }
 
-    body {
-      background: linear-gradient(135deg, #dbeafe, #f0abfc, #a5f3fc);
-      background-size: 400% 400%;
-      animation: gradientFlow 15s ease infinite;
-      color: #1f2937;
-      overflow-x: hidden;
-    }
+  body {
+  background: linear-gradient(135deg, #a855f7, #6b21a8, #1e1b4b, #000000);
+  background-size: 400% 400%;
+  animation: gradientFlow 20s ease infinite;
+  color: #f1f5f9;
+  overflow-x: hidden;
+  padding-top: 140px;
+}
 
     @keyframes gradientFlow {
       0% { background-position: 0% 50%; }
@@ -33,17 +34,17 @@
     }
 
     header {
-      position: sticky;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(30, 58, 138, 0.85);
+      background: rgba(76, 29, 149, 0.95);
       backdrop-filter: blur(10px);
       color: white;
       padding: 1rem 1rem;
       text-align: center;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 
     header h1 {
@@ -85,12 +86,11 @@
       padding: 3rem 2rem;
       max-width: 1000px;
       margin: auto;
-      scroll-margin-top: 120px;
     }
 
     h2 {
       margin-bottom: 1rem;
-      color: #1e293b;
+      color: #facc15;
       border-bottom: 2px solid #e2e8f0;
       padding-bottom: 0.5rem;
     }
@@ -98,7 +98,7 @@
     h3 {
       font-size: 1.2rem;
       font-weight: 600;
-      color: #1e293b;
+      color: #f9fafb;
       margin: 1.5rem 0 0.5rem;
       border-left: 4px solid #38bdf8;
       padding-left: 0.5rem;
@@ -111,7 +111,7 @@
     }
 
     .skills li {
-      background: linear-gradient(to right, #38bdf8, #6366f1);
+      background: linear-gradient(to right, #8b5cf6, #7c3aed);
       padding: 0.5rem 1rem;
       border-radius: 20px;
       list-style: none;
@@ -121,27 +121,27 @@
     }
 
     .project-card {
-      background: white;
+      background: #1e1b4b;
       padding: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
       margin-bottom: 2rem;
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .project-card:hover {
       transform: scale(1.03);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.35);
     }
 
     .project-card h3 {
       margin-bottom: 0.5rem;
-      color: #0f172a;
+      color: #fbbf24;
     }
 
     .project-card p {
       margin-bottom: 0.8rem;
-      color: #475569;
+      color: #e2e8f0;
       text-align: justify;
     }
 
@@ -150,7 +150,7 @@
       margin-top: 0.3rem;
       margin-right: 1rem;
       padding: 0.4rem 0.8rem;
-      background-color: #3b82f6;
+      background-color: #7c3aed;
       color: white;
       text-decoration: none;
       border-radius: 6px;
@@ -159,11 +159,11 @@
     }
 
     .project-card a:hover {
-      background-color: #2563eb;
+      background-color: #6d28d9;
     }
 
     footer {
-      background: #1e3a8a;
+      background: #0f172a;
       color: white;
       text-align: center;
       padding: 2.5rem 1rem 1.5rem;
@@ -199,7 +199,7 @@
     </nav>
   </header>
 
-  <main>
+ <main>
     <section id="about" class="about">
       <h2>Tentang Saya</h2>
       <p>Saya adalah mahasiswa Institut Teknologi Sumatera dengan program studi Teknik Informatika. Saya memiliki 
@@ -307,7 +307,6 @@
   </footer>
 </body>
 </html>
-
 
 
 
