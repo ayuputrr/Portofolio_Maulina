@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -28,13 +29,14 @@
       100% { background-position: 0% 50%; }
     }
 
-  header {
-  background: linear-gradient(to right, #7c3aed, #4c1d95);
-  color: white;
-  padding: 2rem 1rem 2.5rem;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
+    header {
+      background: rgba(76, 29, 149, 0.95);
+      backdrop-filter: blur(10px);
+      color: white;
+      padding: 2rem 1rem 2.5rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
 
     header h1 {
       font-size: 1.8rem;
@@ -45,38 +47,15 @@
       font-size: 1rem;
     }
 
-.outer-ring {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background: white; /* border putih */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto 1rem auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.inner-bg {
-  width: 126px;
-  height: 126px;
-  border-radius: 50%;
-  background: white; /* isi latar belakang putih */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.profile-img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-
-
+    .profile-img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      margin-bottom: 0.8rem;
+    }
 
     nav {
       margin-top: 1rem;
@@ -181,31 +160,15 @@
       padding: 2.5rem 1rem 1.5rem;
       margin-top: 3rem;
     }
-footer {
-  background: #0f172a;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 2.5rem 1rem 1.5rem;
-  margin-top: 3rem;
-}
 
-  footer p {
-  margin: 0.3rem 0;
-}
+    footer a {
+      color: #facc15;
+      text-decoration: none;
+    }
 
-footer a {
-  display: inline-block;
-  margin: 0.2rem 0;
-  color: #facc15;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
+    footer a:hover {
+      text-decoration: underline;
+    }
 
     .about p,
     .project-card p,
