@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Konsultasi Mental - Detail Proyek</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1e293b;
+      --secondary: #334155;
+      --accent: #22d3ee;
+      --white: #f8fafc;
+      --glass-bg: rgba(30,41,59,0.94);
+      --glass-border: rgba(34,211,238,0.13);
+      --shadow: 0 8px 32px 0 rgba(30,41,59,0.18);
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #1e293b 0%, #334155 60%, #0f172a 100%);
+      background-size: 400% 400%;
+      animation: gradientFlow 16s ease-in-out infinite;
+      color: var(--white);
+      min-height: 100vh;
+    }
+    @keyframes gradientFlow {
+      0% {background-position:0% 50%;}
+      50% {background-position:100% 50%;}
+      100% {background-position:0% 50%;}
+    }
+    .navbar {
+      background: var(--glass-bg) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
+    .navbar-brand, .nav-link {
+      color: var(--accent) !important;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 1.12rem;
+    }
+    .nav-link.active, .nav-link:hover, .nav-link:focus, .nav-link:active {
+      color: var(--white) !important;
+      background: var(--accent);
+      border-radius: 20px;
+      transition: background .3s, color .3s;
+    }
+    .project-detail-section {
+      padding: 2rem 0 1.5rem 0;
+      min-height: 90vh;
+    }
+    .project-title {
+      color: var(--accent);
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 1.1rem;
+      text-align: center;
+    }
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 10px 18px;
+      margin-bottom: 2.2rem;
+      justify-items: center;
+    }
+    .project-gallery img {
+      width: 100%;
+      max-width: 180px;
+      aspect-ratio: 3/5;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 8px 36px var(--secondary);
+      background: #fff;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .project-gallery img:hover {
+      transform: scale(1.04);
+      box-shadow: 0 14px 48px var(--accent);
+    }
+    @media (max-width: 900px) {
+      .project-gallery { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr);}
+      .project-gallery img { max-width: 220px; }
+    }
+    @media (max-width: 600px) {
+      .project-gallery { grid-template-columns: 1fr; grid-template-rows: repeat(7, 1fr);}
+      .project-gallery img { max-width: 90vw; }
+    }
+    .project-info {
+      background: var(--glass-bg);
+      border-radius: 18px;
+      padding: 1.3rem;
+      box-shadow: var(--shadow);
+      color: var(--white);
+      margin-bottom: 2rem;
+    }
+    .project-info h3 {
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .project-info ul {
+      padding-left: 1.2rem;
+      margin-bottom: 1.2rem;
+      font-size: 0.97rem;
+    }
+    .project-info code {
+      color: #22d3ee;
+      background: #1e293b;
+      border-radius: 4px;
+      padding: 2px 5px;
+      font-size: 0.95em;
+    }
+    .btn-primary, .btn-outline-info {
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-right: 0.5rem;
+      font-size: 0.95rem;
+      padding: 0.45rem 1.2rem;
+      border-radius: 24px;
+    }
+    .btn-primary {
+      background: var(--accent);
+      border: none;
+      color: var(--primary);
+    }
+    .btn-primary:hover {
+      background: var(--white);
+      color: var(--accent);
+    }
+    .btn-outline-info {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    .btn-outline-info:hover, .btn-outline-info:focus, .btn-outline-info:active {
+      background: var(--accent);
+      color: var(--primary);
+      border-color: var(--accent);
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="dashboard.html">Maulina Ayu S</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skill</a></li>
+          <li class="nav-item"><a class="nav-link active" href="projects.html">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Detail Section -->
+  <section class="project-detail-section">
+    <div class="container">
+      <h1 class="project-title">UI/UX Konsultasi Mental</h1>
+      <div class="project-gallery">
+        <img src="aset/mental.png" alt="Tampilan Beranda Konsultasi Mental" />
+        <img src="aset/mental2.png" alt="Fitur Konsultasi Dokter" />
+        <img src="aset/mental3.png" alt="Pilih Jadwal Konsultasi" />
+        <img src="aset/mental4.png" alt="Fitur Journaling" />
+        <img src="aset/mental5.png" alt="Fitur Mood Tracker" />
+        <img src="aset/mental6.png" alt="Chat dengan Dokter" />
+        <img src="aset/mental7.png" alt="Telepon Dokter" />
+         <img src="aset/mental8.png" alt="Telepon Dokter" />
+      </div>
+      <div class="project-info">
+        <h3>Desain UI/UX</h3>
+        <p>
+          Desain UI/UX website konsultasi mental ini berfokus pada <b>pengalaman pengguna yang intuitif, aman, dan nyaman</b>. Pengguna dapat dengan mudah memilih dokter, menentukan jadwal konsultasi, dan melakukan pemesanan langsung dari web. Setiap fitur dirancang agar mudah diakses, dengan navigasi jelas, warna yang menenangkan, dan ikon yang familiar.
+        </p>
+        <ul>
+          <li>
+            <b>Landing Page & Dashboard:</b> Tampilan bersih, menu navigasi jelas, serta akses cepat ke fitur utama seperti konsultasi, journaling, mood tracker, dan riwayat konsultasi.
+          </li>
+          <li>
+            <b>Pemilihan Dokter & Jadwal:</b> Pengguna dapat memilih dokter spesialis sesuai kebutuhan, melihat profil dokter, serta memilih jadwal yang tersedia melalui kalender interaktif. Proses pemesanan dibuat sederhana dan transparan.
+          </li>
+          <li>
+            <b>Fitur Konsultasi:</b> Setelah pemesanan, pengguna dapat melakukan konsultasi via chat atau telepon langsung dengan dokter yang dipilih. Tersedia notifikasi pengingat jadwal dan status pemesanan.
+          </li>
+          <li>
+            <b>Journaling & Mood Tracker:</b> Pengguna dapat menulis jurnal harian dan melacak suasana hati (mood) dengan visualisasi grafik sederhana, membantu refleksi diri dan pemantauan kesehatan mental secara mandiri.
+          </li>
+          <li>
+            <b>Responsif & Aksesibel:</b> Desain responsif untuk desktop dan mobile, serta aksesibilitas warna dan ukuran font yang ramah bagi semua kalangan.
+          </li>
+        </ul>
+        <h3>Fitur Utama</h3>
+        <ul>
+          <li>Konsultasi dengan dokter pilihan sesuai jadwal yang dipilih</li>
+          <li>Pemesanan konsultasi langsung melalui website</li>
+          <li>Fitur journaling untuk mencatat perasaan dan pengalaman harian</li>
+          <li>Fitur mood tracker dengan visualisasi grafik</li>
+          <li>Chat dan telepon langsung dengan dokter setelah pemesanan</li>
+        </ul>
+        <h3>Teknologi yang Digunakan</h3>
+        <ul>
+          <li>Figma</li>
+         
+        </ul>
+        <div class="mb-3 mt-4">
+          <h3>Link Proyek</h3>
+    
+          <a href="https://www.figma.com/proto/JjRfPnzZEVgLBTNWD9cbZ4/UI-UX_IMK_KEL8?node-id=678-3081&p=f&t=ePdtZglVHgPv5TRQ-1&scaling=scale-down&content-scaling=fixed&page-id=613%3A5637&starting-point-node-id=613%3A6073&show-proto-sidebar=1" class="btn btn-outline-info btn-sm" target="_blank">Lihat Demo</a>
+        </div>
+        <a href="projects.html" class="btn btn-outline-info btn-sm">&larr; Kembali ke Proyek</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
