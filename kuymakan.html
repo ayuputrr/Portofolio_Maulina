@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kuy Makan - Detail Proyek</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #1e293b;
+      --secondary: #334155;
+      --accent: #22d3ee;
+      --white: #f8fafc;
+      --glass-bg: rgba(30,41,59,0.94);
+      --glass-border: rgba(34,211,238,0.13);
+      --shadow: 0 8px 32px 0 rgba(30,41,59,0.18);
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #1e293b 0%, #334155 60%, #0f172a 100%);
+      background-size: 400% 400%;
+      animation: gradientFlow 16s ease-in-out infinite;
+      color: var(--white);
+      min-height: 100vh;
+    }
+    @keyframes gradientFlow {
+      0% {background-position:0% 50%;}
+      50% {background-position:100% 50%;}
+      100% {background-position:0% 50%;}
+    }
+    .navbar {
+      background: var(--glass-bg) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
+    .navbar-brand, .nav-link {
+      color: var(--accent) !important;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 1.12rem;
+    }
+    .nav-link.active, .nav-link:hover {
+      color: var(--white) !important;
+      background: var(--accent);
+      border-radius: 20px;
+      transition: background .3s, color .3s;
+    }
+    .project-detail-section {
+      padding: 2rem 0 1.5rem 0;
+    }
+    .project-title {
+      color: var(--accent);
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      justify-items: center;
+      margin-bottom: 2.5rem;
+    }
+    .project-gallery img {
+      width: 100%;
+      max-width: 180px;
+      aspect-ratio: 3/5;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 8px 36px var(--secondary);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .project-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 14px 48px var(--accent);
+    }
+    @media (max-width: 900px) {
+      .project-gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .project-gallery {
+        grid-template-columns: 1fr;
+      }
+      .project-gallery img {
+        max-width: 90vw;
+      }
+    }
+    .project-info {
+      background: var(--glass-bg);
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+    }
+    .project-info h3 {
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .project-info ul {
+      padding-left: 1.2rem;
+    }
+    .btn-primary, .btn-outline-info {
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 24px;
+      padding: 0.45rem 1.2rem;
+      margin-right: 0.5rem;
+    }
+    .btn-primary {
+      background: var(--accent);
+      border: none;
+      color: var(--primary);
+    }
+    .btn-primary:hover {
+      background: var(--white);
+      color: var(--accent);
+    }
+    .btn-outline-info {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    .btn-outline-info:hover {
+      background: var(--accent);
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="dashboard.html">Maulina Ayu S</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skill</a></li>
+          <li class="nav-item"><a class="nav-link active" href="projects.html">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Detail Section -->
+  <section class="project-detail-section">
+    <div class="container">
+      <h1 class="project-title" data-aos="zoom-in">Aplikasi Website Kuy-Makan</h1>
+
+      <div class="project-gallery" data-aos="zoom-in" data-aos-delay="200">
+        <img src="aset/kuymakan.png" alt="Tampilan Kuy Makan" />
+        <img src="aset/kuymakanberanda.png" alt="Tampilan Kuy Makan Beranda" />
+        <img src="aset/keranjangkuymakan.png" alt="Keranjang Kuy Makan" />
+        <img src="aset/metodekuymakan.png" alt="Metode Pembayaran Kuy Makan" />
+        <img src="aset/strukkuymakan.png" alt="Struk Kuy Makan" />
+        <img src="aset/adminkuymakan.png" alt="Admin Kuy Makan" />
+        <img src="aset/cetakstrukkuymakan.png" alt="Cetak Struk Kuy Makan" />
+      </div>
+
+      <div class="project-info" data-aos="fade-up" data-aos-delay="300">
+        <h3 data-aos="zoom-in">Deskripsi Proyek</h3>
+        <p data-aos="zoom-out">
+          Kuy-Makan adalah aplikasi web berbasis React.js yang memudahkan pengguna dalam mencari dan memesan makanan secara online...
+        </p>
+
+        <h3 data-aos="zoom-in">Fitur Utama</h3>
+        <ul data-aos="zoom-out">
+          <li>Pencarian makanan berdasarkan kategori</li>
+          <li>Keranjang belanja interaktif</li>
+          <li>Metode pembayaran modern dan mudah</li>
+          <li>Struk pemesanan otomatis setelah pembayaran</li>
+          <li>Admin panel untuk pengelolaan produk dan transaksi</li>
+        </ul>
+
+        <h3 data-aos="zoom-in">Teknologi yang Digunakan</h3>
+        <ul data-aos="zoom-out">
+          <li>React.js (Frontend)</li>
+          <li>Vite (build tools)</li>
+          <li>JavaScript ES6+, CSS3, HTML5</li>
+          <li>Vercel (Deployment Hosting)</li>
+        </ul>
+
+        <h3 data-aos="zoom-in">Link Proyek</h3>
+        <div data-aos="zoom-out">
+          <a href="https://github.com/ayuputrr/uts_pemrograman_web_122140080" class="btn btn-primary btn-sm" target="_blank">Lihat Kode</a>
+          <a href="https://kuy-makan.vercel.app/home" class="btn btn-outline-info btn-sm" target="_blank">Lihat Demo</a>
+        </div>
+        <br>
+        <a href="projects.html" class="btn btn-outline-info btn-sm" data-aos="fade-up">&larr; Kembali ke Proyek</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>

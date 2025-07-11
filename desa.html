@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website Informasi Desa Pulau Benawang - Detail Proyek</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #1e293b;
+      --secondary: #334155;
+      --accent: #22d3ee;
+      --white: #f8fafc;
+      --glass-bg: rgba(30,41,59,0.94);
+      --glass-border: rgba(34,211,238,0.13);
+      --shadow: 0 8px 32px 0 rgba(30,41,59,0.18);
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #1e293b 0%, #334155 60%, #0f172a 100%);
+      background-size: 400% 400%;
+      animation: gradientFlow 16s ease-in-out infinite;
+      color: var(--white);
+      min-height: 100vh;
+    }
+
+    @keyframes gradientFlow {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .navbar {
+      background: var(--glass-bg) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
+
+    .navbar-brand, .nav-link {
+      color: var(--accent) !important;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .nav-link.active, .nav-link:hover {
+      color: var(--white) !important;
+      background: var(--accent);
+      border-radius: 20px;
+    }
+
+    .project-detail-section {
+      padding: 3rem 0;
+    }
+
+    .project-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .project-image {
+      max-width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 6px 32px var(--secondary);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .project-info {
+      background: var(--glass-bg);
+      padding: 2rem;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      max-width: 850px;
+      margin: 0 auto 3rem auto;
+    }
+
+    .project-info h3 {
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 1.8rem;
+      font-size: 1.1rem;
+    }
+
+    .project-info p, .project-info ul {
+      font-size: 0.97rem;
+    }
+
+    .project-info ul {
+      padding-left: 1.2rem;
+    }
+
+    .btn-primary, .btn-outline-info {
+      border-radius: 24px;
+      font-weight: 600;
+      margin-right: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      border: none;
+      color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--white);
+      color: var(--accent);
+    }
+
+    .btn-outline-info {
+      border: 2px solid var(--accent);
+      color: var(--accent);
+    }
+
+    .btn-outline-info:hover {
+      background-color: var(--accent);
+      color: var(--primary);
+    }
+
+    @media (max-width: 700px) {
+      .project-title { font-size: 1.4rem; }
+      .project-info { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="dashboard.html">Maulina Ayu S</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skill</a></li>
+          <li class="nav-item"><a class="nav-link active" href="projects.html">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Detail Section -->
+  <section class="project-detail-section">
+    <div class="container">
+      <h1 class="project-title" data-aos="zoom-in">Website Informasi Desa Pulau Benawang</h1>
+      <img src="aset/desa.png" alt="Website Informasi Desa Pulau Benawang" class="project-image" data-aos="zoom-in" data-aos-delay="200" />
+
+      <div class="project-info" data-aos="fade-up" data-aos-delay="300">
+
+        <h3 data-aos="zoom-in">Profil Pekon</h3>
+        <p data-aos="zoom-out">
+          Website Informasi Desa Pulau Benawang adalah portal digital yang menyediakan berbagai informasi seputar Pekon Pulau Benawang...
+        </p>
+
+        <h3 data-aos="zoom-in">Visi dan Misi</h3>
+        <p data-aos="zoom-out"><strong>Visi:</strong> "Terwujudnya pekon Pulau Benawang yang tertib, aman, nyaman, kondusif, mandiri, sejahtera."</p>
+        <ul data-aos="zoom-out">
+          <li>Menata pemerintahan pekon yang kompak dan bertanggung jawab</li>
+          <li>Meningkatkan pelayanan masyarakat secara terpadu dan serius</li>
+          <li>Mendorong peningkatan kesehatan masyarakat</li>
+          <li>Membangun dan memelihara sarana dan prasarana pekon</li>
+          <li>Menumbuhkembangkan usaha kecil menengah dan BUM-PEKON</li>
+          <li>Mencari dan menambah debit air</li>
+          <li>Mewujudkan dan mengembangkan kegiatan keagamaan</li>
+          <li>Bekerja sama dengan tokoh masyarakat, adat, dan pemuda dalam seni, budaya, dan olahraga</li>
+          <li>Mendorong kemajuan pendidikan formal dan informal</li>
+          <li>Bekerja sama dengan dinas kehutanan, pertanian, dan lainnya</li>
+        </ul>
+
+        <h3 data-aos="zoom-in">Sumber Mata Pencaharian</h3>
+        <ul data-aos="zoom-out">
+          <li><strong>Pertanian:</strong> Padi dan sayur-sayuran</li>
+          <li><strong>Perkebunan:</strong> Manggis, durian, kelapa, ketupa, pepaya, alpukat, dan lainnya</li>
+        </ul>
+
+        <h3 data-aos="zoom-in">Pembagian Wilayah</h3>
+        <p data-aos="zoom-out">Desa Pulau Benawang kini terbagi menjadi tiga dusun:</p>
+        <ul data-aos="zoom-out">
+          <li><strong>Dusun I Pulau Benawang:</strong> Pusat sejarah dan budaya desa</li>
+          <li><strong>Dusun II Pematang Buah:</strong> Pusat administrasi, pendidikan, dan perdagangan hasil bumi</li>
+          <li><strong>Dusun III Tanjung Kaya:</strong> Kaya akan sumber daya alam dan potensi pariwisata</li>
+        </ul>
+
+        <h3 data-aos="zoom-in">Fitur Website</h3>
+        <ul data-aos="zoom-out">
+          <li>Profil pekon dan sejarah desa</li>
+          <li>Visi, misi, dan program pembangunan</li>
+          <li>Informasi pembagian wilayah dan potensi dusun</li>
+          <li>Galeri foto desa dan kegiatan masyarakat</li>
+          <li>Berita dan pengumuman desa</li>
+        </ul>
+
+        <h3 data-aos="zoom-in">Teknologi yang Digunakan</h3>
+        <ul data-aos="zoom-out">
+          <li>React.js</li>
+          <li>Bootstrap 5</li>
+          <li>HTML5 & CSS3</li>
+          <li>Vercel (Deployment)</li>
+        </ul>
+
+        <div class="mb-3" data-aos="zoom-in">
+          <a href="https://github.com/ayuputrr/Website-Informasi-Pulau-Benawang" class="btn btn-primary btn-sm" target="_blank">Lihat Kode</a>
+          <a href="https://website-informasi-pulau-benawang.vercel.app" class="btn btn-outline-info btn-sm" target="_blank">Lihat Demo</a>
+        </div>
+        <a href="projects.html" class="btn btn-outline-info btn-sm" data-aos="zoom-out">&larr; Kembali ke Proyek</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
