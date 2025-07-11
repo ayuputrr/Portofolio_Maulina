@@ -4,10 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>JKu (Jadwal Kuliah) - Detail Proyek</title>
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
   <style>
     :root {
       --primary: #1e293b;
@@ -15,9 +19,9 @@
       --accent: #22d3ee;
       --white: #f8fafc;
       --glass-bg: rgba(30,41,59,0.94);
-      --glass-border: rgba(34,211,238,0.13);
       --shadow: 0 8px 32px 0 rgba(30,41,59,0.18);
     }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(120deg, #1e293b 0%, #334155 60%, #0f172a 100%);
@@ -26,109 +30,118 @@
       color: var(--white);
       min-height: 100vh;
     }
+
     @keyframes gradientFlow {
-      0% {background-position:0% 50%;}
-      50% {background-position:100% 50%;}
-      100% {background-position:0% 50%;}
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
     }
+
     .navbar {
       background: var(--glass-bg) !important;
       backdrop-filter: blur(10px);
       box-shadow: var(--shadow);
     }
+
     .navbar-brand, .nav-link {
       color: var(--accent) !important;
       font-weight: 700;
-      letter-spacing: 1px;
-      font-size: 1.12rem;
+      font-size: 1.1rem;
     }
-    .nav-link.active, .nav-link:hover, .nav-link:focus, .nav-link:active {
-      color: var(--white) !important;
+
+    .nav-link.active, .nav-link:hover {
       background: var(--accent);
+      color: var(--primary) !important;
       border-radius: 20px;
-      transition: background .3s, color .3s;
     }
+
     .project-detail-section {
-      padding: 2rem 0 1.5rem 0;
-      min-height: 90vh;
+      padding: 3rem 0;
     }
+
     .project-title {
-      color: var(--accent);
-      font-size: 2.1rem;
+      font-size: 2rem;
       font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 1.2rem;
+      color: var(--accent);
       text-align: center;
+      margin-bottom: 2rem;
     }
+
     .project-image {
       max-width: 100%;
       border-radius: 16px;
       box-shadow: 0 6px 32px var(--secondary);
-      margin-bottom: 2rem;
+      margin: 0 auto 2rem auto;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
     }
+
     .project-info {
       background: var(--glass-bg);
-      border-radius: 18px;
       padding: 2rem;
+      border-radius: 18px;
       box-shadow: var(--shadow);
-      color: var(--white);
-      margin-bottom: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 850px;
+      margin: 0 auto 3rem auto;
     }
+
     .project-info h3 {
       color: var(--accent);
       font-weight: 600;
-      margin-bottom: 1rem;
+      margin-top: 1.8rem;
       font-size: 1.1rem;
     }
-    .project-info ul {
-      padding-left: 1.2rem;
-      margin-bottom: 1.2rem;
+
+    .project-info p, .project-info ul {
       font-size: 0.97rem;
     }
-    .btn-primary, .btn-outline-info {
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      margin-right: 0.5rem;
-      font-size: 0.95rem;
-      padding: 0.45rem 1.2rem;
-      border-radius: 24px;
+
+    .project-info ul {
+      padding-left: 1.2rem;
     }
+
+    .btn-primary, .btn-outline-info {
+      border-radius: 24px;
+      font-weight: 600;
+      margin-right: 0.5rem;
+      margin-top: 1rem;
+    }
+
     .btn-primary {
-      background: var(--accent);
+      background-color: var(--accent);
       border: none;
       color: var(--primary);
     }
+
     .btn-primary:hover {
-      background: var(--white);
+      background-color: var(--white);
       color: var(--accent);
     }
+
     .btn-outline-info {
+      border: 2px solid var(--accent);
       color: var(--accent);
-      border-color: var(--accent);
     }
-    .btn-outline-info:hover, .btn-outline-info:focus, .btn-outline-info:active {
-      background: var(--accent);
+
+    .btn-outline-info:hover {
+      background-color: var(--accent);
       color: var(--primary);
-      border-color: var(--accent);
-      outline: none;
     }
+
+    .table th, .table td {
+      font-size: 0.9rem;
+    }
+
     @media (max-width: 700px) {
-      .project-title { font-size: 1.3rem; }
-      .project-info { padding: 1.1rem; }
+      .project-title { font-size: 1.4rem; }
+      .project-info { padding: 1.2rem; }
     }
   </style>
 </head>
 <body>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="dashboard.html">Maulina Ayu s</a>
+      <a class="navbar-brand" href="dashboard.html">Maulina Ayu S</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -146,84 +159,73 @@
   <!-- Project Detail Section -->
   <section class="project-detail-section">
     <div class="container">
-      <h1 class="project-title">JKu (Jadwal Kuliah) 📘</h1>
-      <img src="aset/jku.png" alt="JKu Aplikasi Jadwal Kuliah" class="project-image" />
+      <h1 class="project-title" data-aos="fade-down">JKu (Jadwal Kuliah) 📘</h1>
+      <img src="aset/jku.png" alt="JKu Aplikasi Jadwal Kuliah" class="project-image" data-aos="zoom-in" data-aos-delay="200" />
       
-      <div class="project-info">
+      <div class="project-info" data-aos="fade-up" data-aos-delay="300">
         <h3>Deskripsi Proyek</h3>
         <p>
-          JKu (Jadwal Kuliah) adalah dashboard pribadi sederhana untuk mahasiswa, yang berfungsi untuk mencatat, mengelola, dan melihat <b>jadwal kuliah</b> secara interaktif. Dibuat menggunakan HTML5, Tailwind CSS, dan JavaScript ES6+ dengan penyimpanan data berbasis <code>localStorage</code>.
+          <strong>JKu (Jadwal Kuliah)</strong> adalah aplikasi dashboard pribadi berbasis web yang dirancang khusus untuk mahasiswa dalam mengatur jadwal kuliah mereka secara efisien.
         </p>
-        
-        <h3>Link Proyek</h3>
-        <div class="mb-3">
-          <a href="https://github.com/ayuputrr/JKu" class="btn btn-primary btn-sm" target="_blank">Lihat Kode di GitHub</a>
-          <a href="https://jadwalkuy.vercel.app/" class="btn btn-outline-info btn-sm" target="_blank">Lihat Demo</a>
-        </div>
+        <p>
+          Dibangun menggunakan <strong>HTML5</strong>, <strong>Tailwind CSS</strong>, dan <strong>JavaScript (ES6+)</strong>, aplikasi ini menyimpan data secara lokal menggunakan <code>localStorage</code> tanpa backend eksternal.
+        </p>
 
-        <h3>Fitur Utama</h3>
-        <ul>
-          <li>Tambah jadwal kuliah dengan form input</li>
-          <li>Edit jadwal melalui halaman tampilan daftar</li>
-          <li>Hapus jadwal langsung dari daftar</li>
-          <li>Filter jadwal berdasarkan hari (contoh: “Senin”)</li>
-          <li>Simpan data ke <code>localStorage</code> agar tidak hilang saat refresh</li>
-          <li>Navigasi antar halaman (Beranda & Jadwal)</li>
-          <li>Antarmuka menggunakan <b>Tailwind CSS</b> yang modern dan responsif</li>
+        <h3 data-aos="fade-right" data-aos-delay="100">Fitur Utama</h3>
+        <ul data-aos="fade-up" data-aos-delay="200">
+          <li>Tambah, edit, dan hapus jadwal kuliah dengan mudah</li>
+          <li>Filter jadwal berdasarkan hari (Senin - Minggu)</li>
+          <li>Penyimpanan data otomatis di <code>localStorage</code></li>
+          <li>Interface responsive dengan Tailwind CSS</li>
+          <li>Simulasi loading saat load awal</li>
+          <li>Split halaman (Beranda & Jadwal)</li>
         </ul>
-        <h3>Fitur ES6+ yang Diimplementasikan</h3>
-        <table class="table table-dark table-bordered mt-3">
+
+        <h3 data-aos="fade-right" data-aos-delay="300">Teknologi & Tools</h3>
+        <ul data-aos="fade-up" data-aos-delay="400">
+          <li>HTML5, CSS3, JavaScript (ES6+)</li>
+          <li>Tailwind CSS</li>
+          <li>Vite untuk development server</li>
+          <li>Vercel untuk deployment</li>
+        </ul>
+
+        <h3 data-aos="fade-right" data-aos-delay="500">Fitur JavaScript Modern (ES6+)</h3>
+        <table class="table table-dark table-bordered mt-3" data-aos="zoom-in-up" data-aos-delay="600">
           <thead>
             <tr>
-              <th>Fitur ES6+</th>
-              <th>Implementasi</th>
+              <th>Fitur</th>
+              <th>Contoh Implementasi</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><code>let</code> & <code>const</code></td>
-              <td>Digunakan di seluruh modul JS</td>
-            </tr>
-            <tr>
-              <td>Arrow Functions (<code>=></code>)</td>
-              <td><code>renderSchedules</code>, <code>setupFilter</code>, <code>delay</code>, dan lainnya</td>
-            </tr>
-            <tr>
-              <td>Template Literals</td>
-              <td>Untuk render HTML dinamis di <code>createScheduleItem()</code></td>
-            </tr>
-            <tr>
-              <td>Async/Await</td>
-              <td><code>await delay(200)</code> untuk simulasi proses async</td>
-            </tr>
-            <tr>
-              <td>Classes</td>
-              <td><code>class Schedule</code> digunakan untuk struktur data jadwal</td>
-            </tr>
-            <tr>
-              <td>Modularisasi</td>
-              <td>Menggunakan <code>import/export</code> antara file utils dan data</td>
-            </tr>
+            <tr><td><code>let</code>, <code>const</code></td><td>Untuk deklarasi variabel</td></tr>
+            <tr><td>Arrow Functions</td><td>Pada semua fungsi utama dan callback</td></tr>
+            <tr><td>Template Literals</td><td>Render HTML dinamis</td></tr>
+            <tr><td>Async/Await</td><td>Simulasi loading awal aplikasi</td></tr>
+            <tr><td>Class</td><td>Class <code>Schedule</code> untuk struktur data jadwal</td></tr>
+            <tr><td>Modularisasi</td><td>Impor dan ekspor file JS (utils, data)</td></tr>
           </tbody>
         </table>
-        <h3>Penjelasan Singkat</h3>
-        <ul>
-          <li><b>let</b> dan <b>const</b>: digunakan sesuai fungsinya untuk variabel tetap dan variabel yang berubah.</li>
-          <li><b>Arrow Functions</b>: membuat kode lebih ringkas, digunakan untuk callback, event listener, dan render data.</li>
-          <li><b>Template Literals</b>: digunakan untuk menampilkan elemen HTML dengan data dinamis secara efisien.</li>
-          <li><b>Async/Await</b>: digunakan untuk menunggu simulasi delay sebelum render awal.</li>
-          <li><b>Class</b>: digunakan untuk mendefinisikan struktur data <code>Schedule</code>.</li>
-        </ul>
-        <h3>Link Proyek</h3>
-        <div class="mb-3">
-          <a href="https://github.com/ayuputrr/Pustakaku" class="btn btn-primary btn-sm" target="_blank">Lihat Kode</a>
-          <a href="https://pustakaku.vercel.app/" class="btn btn-outline-info btn-sm" target="_blank">Lihat Demo</a>
+
+        <h3 data-aos="fade-right" data-aos-delay="700">Link Proyek</h3>
+        <div class="mb-3" data-aos="fade-up" data-aos-delay="800">
+          <a href="https://github.com/ayuputrr/JKu" class="btn btn-primary btn-sm" target="_blank">Lihat Kode</a>
+          <a href="https://jadwalkuy.vercel.app/" class="btn btn-outline-info btn-sm" target="_blank">Lihat Demo</a>
         </div>
-        <a href="projects.html" class="btn btn-outline-info btn-sm">&larr; Kembali ke Proyek</a>
+
+        <a href="projects.html" class="btn btn-outline-info btn-sm" data-aos="fade-left" data-aos-delay="900">&larr; Kembali ke Proyek</a>
       </div>
     </div>
   </section>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
