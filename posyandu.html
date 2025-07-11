@@ -4,10 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Website Posyandu Kartika Sabah Balau - Detail Proyek</title>
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
   <style>
     :root {
       --primary: #1e293b;
@@ -15,9 +19,9 @@
       --accent: #22d3ee;
       --white: #f8fafc;
       --glass-bg: rgba(30,41,59,0.94);
-      --glass-border: rgba(34,211,238,0.13);
       --shadow: 0 8px 32px 0 rgba(30,41,59,0.18);
     }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(120deg, #1e293b 0%, #334155 60%, #0f172a 100%);
@@ -26,105 +30,115 @@
       color: var(--white);
       min-height: 100vh;
     }
+
     @keyframes gradientFlow {
-      0% {background-position:0% 50%;}
-      50% {background-position:100% 50%;}
-      100% {background-position:0% 50%;}
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
     }
+
     .navbar {
       background: var(--glass-bg) !important;
       backdrop-filter: blur(10px);
       box-shadow: var(--shadow);
     }
+
     .navbar-brand, .nav-link {
       color: var(--accent) !important;
       font-weight: 700;
-      letter-spacing: 1px;
       font-size: 1.12rem;
+      letter-spacing: 1px;
     }
-    .nav-link.active, .nav-link:hover, .nav-link:focus, .nav-link:active {
-      color: var(--white) !important;
+
+    .nav-link.active, .nav-link:hover {
       background: var(--accent);
+      color: var(--primary) !important;
       border-radius: 20px;
-      transition: background .3s, color .3s;
+      transition: all 0.3s ease-in-out;
     }
+
     .project-detail-section {
-      padding: 2rem 0 1.5rem 0;
-      min-height: 90vh;
+      padding: 2.5rem 0 2rem;
     }
+
     .project-title {
-      color: var(--accent);
       font-size: 2.1rem;
       font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 1.2rem;
+      color: var(--accent);
       text-align: center;
+      margin-bottom: 2rem;
     }
+
     .project-image {
       max-width: 100%;
       border-radius: 16px;
       box-shadow: 0 6px 32px var(--secondary);
-      margin-bottom: 2rem;
+      margin: 0 auto 2rem;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
     }
+
     .project-info {
       background: var(--glass-bg);
-      border-radius: 18px;
       padding: 2rem;
+      border-radius: 18px;
       box-shadow: var(--shadow);
-      color: var(--white);
-      margin-bottom: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 850px;
+      margin: auto;
     }
+
     .project-info h3 {
       color: var(--accent);
       font-weight: 600;
-      margin-bottom: 1rem;
+      margin-top: 1.8rem;
       font-size: 1.1rem;
     }
-    .project-info ul {
-      padding-left: 1.2rem;
-      margin-bottom: 1.2rem;
+
+    .project-info p, .project-info ul {
       font-size: 0.97rem;
     }
+
+    .project-info ul {
+      padding-left: 1.2rem;
+    }
+
     .btn-primary, .btn-outline-info {
+      border-radius: 24px;
       font-weight: 600;
+      font-size: 0.95rem;
       letter-spacing: 0.5px;
       margin-right: 0.5rem;
-      font-size: 0.95rem;
+      margin-top: 1rem;
       padding: 0.45rem 1.2rem;
-      border-radius: 24px;
     }
+
     .btn-primary {
-      background: var(--accent);
+      background-color: var(--accent);
       border: none;
       color: var(--primary);
     }
+
     .btn-primary:hover {
-      background: var(--white);
+      background-color: var(--white);
       color: var(--accent);
     }
+
     .btn-outline-info {
+      border: 1.5px solid var(--accent);
       color: var(--accent);
-      border-color: var(--accent);
     }
-    .btn-outline-info:hover, .btn-outline-info:focus, .btn-outline-info:active {
-      background: var(--accent);
+
+    .btn-outline-info:hover {
+      background-color: var(--accent);
       color: var(--primary);
-      border-color: var(--accent);
-      outline: none;
     }
+
     @media (max-width: 700px) {
-      .project-title { font-size: 1.3rem; }
-      .project-info { padding: 1.1rem; }
+      .project-title { font-size: 1.4rem; }
+      .project-info { padding: 1.2rem; }
     }
   </style>
 </head>
 <body>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
     <div class="container">
@@ -143,39 +157,54 @@
     </div>
   </nav>
 
-  <!-- Project Detail Section -->
+  <!-- Project Detail -->
   <section class="project-detail-section">
     <div class="container">
-      <h1 class="project-title">Website Posyandu Kartika Sabah Balau</h1>
-      <img src="aset/posyandu1.png" alt="Website Posyandu Kartika Sabah Balau" class="project-image" />
-      
-      <div class="project-info">
+      <h1 class="project-title" data-aos="fade-down">Website Posyandu Kartika Sabah Balau</h1>
+      <img src="aset/posyandu1.png" alt="Website Posyandu Kartika Sabah Balau" class="project-image" data-aos="zoom-in" />
+
+      <div class="project-info" data-aos="fade-up">
         <h3>Deskripsi Proyek</h3>
         <p>
-          Website Posyandu Kartika Sabah Balau adalah portal digital yang menyediakan informasi dan edukasi seputar kesehatan ibu dan anak, khususnya di lingkungan Posyandu Kartika Sabah Balau. Website ini memuat artikel tentang gizi anak, kesehatan ibu hamil, serta informasi desa dalam bentuk video pengenalan. Selain itu, terdapat fitur perhitungan gizi anak dan ibu hamil, serta form survei online untuk pengunjung posyandu.
+          Website ini dirancang sebagai media informasi dan edukasi bagi masyarakat sekitar Posyandu Kartika Sabah Balau, khususnya ibu-ibu dan kader posyandu. Fokus utamanya adalah kesehatan ibu dan anak, termasuk nutrisi, pemeriksaan kehamilan, imunisasi, serta perkembangan balita.
         </p>
+        <p>
+          Proyek ini mendukung program digitalisasi desa dan mendekatkan pelayanan kesehatan secara online, terutama pada masa pandemi dan pasca-pandemi. Disajikan dengan visual menarik dan fitur interaktif seperti form survei dan kalkulator gizi.
+        </p>
+
         <h3>Fitur Utama</h3>
         <ul>
-          <li>Artikel edukasi tentang gizi anak, kesehatan ibu, dan informasi desa (terintegrasi dengan Medium)</li>
-          <li>Galeri video pengenalan desa dan kegiatan posyandu</li>
-          <li>Perhitungan gizi anak dan ibu hamil secara otomatis</li>
-          <li>Form survei online untuk pengunjung posyandu</li>
+          <li>Artikel edukatif seputar gizi dan perkembangan anak</li>
+          <li>Galeri dokumentasi kegiatan posyandu</li>
+          <li>Kalkulator gizi interaktif</li>
+          <li>Form survei digital pengunjung</li>
+          <li>Desain responsif untuk berbagai perangkat</li>
         </ul>
+
         <h3>Teknologi yang Digunakan</h3>
         <ul>
-          <li>HTML5 & CSS3 (tampilan website)</li>
-          <li>Medium (platform penulisan artikel dan edukasi)</li>
+          <li>HTML5 & CSS3 untuk struktur dan tampilan</li>
+          <li>JavaScript dasar untuk interaksi pengguna</li>
+          <li>Integrasi artikel Medium untuk edukasi</li>
+          <li>Vercel untuk deployment</li>
         </ul>
+
         <h3>Link Proyek</h3>
-        <div class="mb-3">
+        <div class="mb-3 mt-2">
           <a href="https://github.com/MegumenZ/TubesKSI" class="btn btn-primary btn-sm" target="_blank">Lihat Kode</a>
           <a href="https://posyandukartika.vercel.app" class="btn btn-outline-info btn-sm" target="_blank">Lihat Demo</a>
         </div>
+
         <a href="projects.html" class="btn btn-outline-info btn-sm">&larr; Kembali ke Proyek</a>
       </div>
     </div>
   </section>
 
+  <!-- Script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
 </body>
 </html>
