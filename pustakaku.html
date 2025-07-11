@@ -4,10 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pustakaku - Detail Proyek</title>
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
   <style>
     :root {
       --primary: #1e293b;
@@ -27,9 +31,9 @@
       min-height: 100vh;
     }
     @keyframes gradientFlow {
-      0% {background-position:0% 50%;}
-      50% {background-position:100% 50%;}
-      100% {background-position:0% 50%;}
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
     .navbar {
       background: var(--glass-bg) !important;
@@ -39,70 +43,71 @@
     .navbar-brand, .nav-link {
       color: var(--accent) !important;
       font-weight: 700;
-      letter-spacing: 1px;
       font-size: 1.12rem;
+      letter-spacing: 1px;
     }
-    .nav-link.active, .nav-link:hover, .nav-link:focus, .nav-link:active {
+    .nav-link.active, .nav-link:hover {
       color: var(--white) !important;
       background: var(--accent);
       border-radius: 20px;
-      transition: background .3s, color .3s;
+      transition: all 0.3s;
     }
     .project-detail-section {
-      padding: 2rem 0 1.5rem 0;
-      min-height: 90vh;
+      padding: 2rem 0 1.5rem;
     }
     .project-title {
       color: var(--accent);
       font-size: 2.1rem;
       font-weight: 700;
       letter-spacing: 1px;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
       text-align: center;
     }
     .project-image {
       max-width: 100%;
       border-radius: 16px;
       box-shadow: 0 6px 32px var(--secondary);
-      margin-bottom: 2rem;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto 2rem;
     }
     .project-info {
       background: var(--glass-bg);
       border-radius: 18px;
       padding: 2rem;
       box-shadow: var(--shadow);
-      color: var(--white);
-      margin-bottom: 2rem;
       max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: auto;
     }
     .project-info h3 {
       color: var(--accent);
+      font-size: 1.1rem;
       font-weight: 600;
       margin-bottom: 1rem;
-      font-size: 1.1rem;
     }
     .project-info ul {
       padding-left: 1.2rem;
-      margin-bottom: 1.2rem;
       font-size: 0.97rem;
+      margin-bottom: 1.2rem;
+    }
+    .project-info code {
+      background: #1e293b;
+      color: #22d3ee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.95em;
     }
     .btn-primary, .btn-outline-info {
       font-weight: 600;
-      letter-spacing: 0.5px;
-      margin-right: 0.5rem;
       font-size: 0.95rem;
+      letter-spacing: 0.5px;
       padding: 0.45rem 1.2rem;
       border-radius: 24px;
+      margin-right: 0.5rem;
     }
     .btn-primary {
       background: var(--accent);
-      border: none;
       color: var(--primary);
+      border: none;
     }
     .btn-primary:hover {
       background: var(--white);
@@ -110,25 +115,24 @@
     }
     .btn-outline-info {
       color: var(--accent);
-      border-color: var(--accent);
+      border: 1px solid var(--accent);
     }
-    .btn-outline-info:hover, .btn-outline-info:focus, .btn-outline-info:active {
+    .btn-outline-info:hover {
       background: var(--accent);
       color: var(--primary);
-      border-color: var(--accent);
-      outline: none;
     }
     @media (max-width: 700px) {
-      .project-title { font-size: 1.3rem; }
-      .project-info { padding: 1.1rem; }
+      .project-title { font-size: 1.4rem; }
+      .project-info { padding: 1.2rem; }
     }
   </style>
 </head>
 <body>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="dashboard.html">Maulina Ayu s</a>
+      <a class="navbar-brand" href="dashboard.html">Maulina Ayu S</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -146,44 +150,51 @@
   <!-- Project Detail Section -->
   <section class="project-detail-section">
     <div class="container">
-      <h1 class="project-title">Pustakaku 📚</h1>
-      <img src="aset/pustakaku.png" alt="Pustakaku Aplikasi Pengelolaan Buku" class="project-image" />
-      
-      <div class="project-info">
-        <h3>Deskripsi Proyek</h3>
+      <h1 class="project-title" data-aos="fade-up">Pustakaku 📚</h1>
+      <img src="aset/pustakaku.png" alt="Pustakaku Aplikasi Pengelolaan Buku" class="project-image" data-aos="zoom-in" />
+
+      <div class="project-info" data-aos="fade-up">
+        <h3 data-aos="fade-right">Deskripsi Proyek</h3>
         <p>
-          Pustakaku adalah aplikasi pengelolaan koleksi buku yang dibangun menggunakan React. Aplikasi ini memungkinkan pengguna untuk menambahkan, mengedit, dan menghapus daftar buku berdasarkan status seperti dimiliki, sedang dibaca, dan ingin dibeli.
+          <strong>Pustakaku</strong> adalah aplikasi pengelolaan koleksi buku yang dirancang untuk mencatat buku yang dimiliki, sedang dibaca, atau ingin dibeli. Aplikasi ini memiliki antarmuka interaktif, pencarian cepat, dan menggunakan Firebase untuk sinkronisasi data real-time.
         </p>
-        <h3>Fitur Utama</h3>
-        <ul>
-          <li>Tambah, edit, dan hapus buku</li>
-          <li>Filter berdasarkan status (dimiliki, dibaca, ingin dibeli)</li>
-          <li>Pencarian buku berdasarkan judul atau penulis</li>
-          <li>Statistik buku</li>
-          <li>Penyimpanan data menggunakan Firebase Realtime Database</li>
-          <li>Penggunaan <code>localStorage</code> untuk pencarian dan filter</li>
-          <li>Testing unit menggunakan React Testing Library</li>
-          <li>Validasi input form</li>
-          <li>Menggunakan PropTypes dan React Hooks</li>
+
+        <h3 data-aos="fade-right">Fitur Utama</h3>
+        <ul data-aos="fade-left">
+          <li>CRUD buku dengan form validasi</li>
+          <li>Filter status: dimiliki, dibaca, ingin dibeli</li>
+          <li>Pencarian buku berdasarkan judul/penulis</li>
+          <li>Statistik jumlah buku per kategori</li>
+          <li>Realtime database (Firebase)</li>
+          <li>Local storage untuk filter sementara</li>
+          <li>Testing dengan React Testing Library</li>
+          <li>Penggunaan React Hooks dan PropTypes</li>
         </ul>
-        <h3>Teknologi yang Digunakan</h3>
-        <ul>
-          <li>ReactJS</li>
-          <li>Firebase Realtime Database</li>
-          <li>React Testing Library</li>
-          <li>PropTypes</li>
-          <li>React Hooks</li>
+
+        <h3 data-aos="fade-right">Teknologi yang Digunakan</h3>
+        <ul data-aos="fade-left">
+          <li><strong>ReactJS</strong> – frontend dinamis</li>
+          <li><strong>Firebase</strong> – realtime database</li>
+          <li><strong>React Testing Library</strong> – pengujian komponen</li>
+          <li><strong>PropTypes</strong> – validasi properti komponen</li>
         </ul>
-        <h3>Link Proyek</h3>
-        <div class="mb-3">
+
+        <div class="mb-3 mt-4" data-aos="zoom-in">
+          <h3>Link Proyek</h3>
           <a href="https://github.com/ayuputrr/Pustakaku" class="btn btn-primary btn-sm" target="_blank">Lihat Kode</a>
           <a href="https://pustakaku.vercel.app/" class="btn btn-outline-info btn-sm" target="_blank">Lihat Demo</a>
         </div>
-        <a href="projects.html" class="btn btn-outline-info btn-sm">&larr; Kembali ke Proyek</a>
+
+        <a href="projects.html" class="btn btn-outline-info btn-sm" data-aos="fade-up">&larr; Kembali ke Proyek</a>
       </div>
     </div>
   </section>
 
+  <!-- Script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
 </body>
 </html>
