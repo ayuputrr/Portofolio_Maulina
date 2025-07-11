@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pustaka-App - Detail Proyek</title>
+  <title>Aplikasi Perhitungan Pajak Pegawai - Detail Proyek</title>
+
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
   <style>
     :root {
       --primary: #1e293b;
@@ -18,6 +24,11 @@
       --glass-border: rgba(34,211,238,0.13);
       --shadow: 0 8px 32px 0 rgba(30,41,59,0.18);
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(120deg, #1e293b 0%, #334155 60%, #0f172a 100%);
@@ -26,32 +37,38 @@
       color: var(--white);
       min-height: 100vh;
     }
+
     @keyframes gradientFlow {
       0% {background-position:0% 50%;}
       50% {background-position:100% 50%;}
       100% {background-position:0% 50%;}
     }
+
     .navbar {
       background: var(--glass-bg) !important;
       backdrop-filter: blur(10px);
       box-shadow: var(--shadow);
     }
+
     .navbar-brand, .nav-link {
       color: var(--accent) !important;
       font-weight: 700;
       letter-spacing: 1px;
       font-size: 1.12rem;
     }
-    .nav-link.active, .nav-link:hover, .nav-link:focus, .nav-link:active {
+
+    .nav-link.active, .nav-link:hover, .nav-link:focus {
       color: var(--white) !important;
       background: var(--accent);
       border-radius: 20px;
       transition: background .3s, color .3s;
     }
+
     .project-detail-section {
       padding: 2rem 0 1.5rem 0;
       min-height: 90vh;
     }
+
     .project-title {
       color: var(--accent);
       font-size: 2.1rem;
@@ -60,6 +77,7 @@
       margin-bottom: 1.2rem;
       text-align: center;
     }
+
     .project-image {
       max-width: 100%;
       border-radius: 16px;
@@ -69,6 +87,7 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     .project-info {
       background: var(--glass-bg);
       border-radius: 18px;
@@ -80,24 +99,30 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     .project-info h3 {
       color: var(--accent);
       font-weight: 600;
       margin-bottom: 1rem;
       font-size: 1.1rem;
     }
+
     .project-info ul {
       padding-left: 1.2rem;
       margin-bottom: 1.2rem;
       font-size: 0.97rem;
     }
-    .project-info code {
-      color: #22d3ee;
+
+    pre code {
+      font-size: 0.9rem;
       background: #1e293b;
-      border-radius: 4px;
-      padding: 2px 5px;
-      font-size: 0.95em;
+      padding: 1rem;
+      display: block;
+      border-radius: 10px;
+      color: #a6e3e9;
+      overflow-x: auto;
     }
+
     .btn-primary, .btn-outline-info {
       font-weight: 600;
       letter-spacing: 0.5px;
@@ -106,35 +131,32 @@
       padding: 0.45rem 1.2rem;
       border-radius: 24px;
     }
+
     .btn-primary {
       background: var(--accent);
       border: none;
       color: var(--primary);
     }
+
     .btn-primary:hover {
       background: var(--white);
       color: var(--accent);
     }
+
     .btn-outline-info {
       color: var(--accent);
       border-color: var(--accent);
     }
-    .btn-outline-info:hover, .btn-outline-info:focus, .btn-outline-info:active {
+
+    .btn-outline-info:hover {
       background: var(--accent);
       color: var(--primary);
       border-color: var(--accent);
-      outline: none;
     }
+
     @media (max-width: 700px) {
       .project-title { font-size: 1.3rem; }
       .project-info { padding: 1.1rem; }
-    }
-    .table-dark {
-      background-color: #222c3a;
-      color: #f8fafc;
-    }
-    .table-dark th, .table-dark td {
-      border-color: #334155;
     }
   </style>
 </head>
@@ -160,103 +182,89 @@
   <!-- Project Detail Section -->
   <section class="project-detail-section">
     <div class="container">
-      <h1 class="project-title">Pustaka-App 📚</h1>
-      <img src="aset/pustakadigital.png" alt="Pustaka-App Aplikasi Peminjaman Buku" class="project-image" />
+      <h1 class="project-title" data-aos="fade-down">Aplikasi Perhitungan Pajak Pegawai Pringsewu</h1>
+      <img src="aset/pajak.png" alt="Aplikasi Perhitungan Pajak Pegawai" class="project-image" data-aos="zoom-in" />
       
-      <div class="project-info">
-        <h3>Deskripsi Proyek</h3>
+      <div class="project-info" data-aos="fade-up">
+        <h3 data-aos="fade-right">📘 Deskripsi Aplikasi</h3>
         <p>
-          <b>Pustaka-App</b> adalah aplikasi web peminjaman buku <i>fullstack</i> yang menggunakan React di frontend dan Pyramid di backend. Aplikasi ini memudahkan pengguna untuk meminjam buku secara online, dengan pengelolaan data buku dan peminjaman oleh admin dan user. Frontend menggunakan React dengan routing dinamis, backend menggunakan Pyramid dengan templating Jinja2.
+          Sistem Informasi Perhitungan Pajak Pegawai Kabupaten Pringsewu adalah aplikasi berbasis web yang dikembangkan dengan framework <b>CodeIgniter 4</b>. Tujuannya adalah untuk menghitung, mengelola, dan menyimpan data pajak penghasilan PPh 21 bagi pegawai ASN secara otomatis dan efisien.
         </p>
-        
-        <h3>Dependensi Paket</h3>
-        <ul>
-          <li><b>Frontend</b>
-            <ul>
-              <li><b>react</b> & <b>react-dom</b>: Inti framework React untuk UI.</li>
-              <li><b>react-router-dom</b>: Navigasi SPA.</li>
-              <li><b>axios</b>: HTTP request ke backend API.</li>
-              <li><b>@testing-library/react</b>: Unit test komponen React.</li>
-              <li><b>web-vitals</b>: Monitoring performa aplikasi.</li>
-            </ul>
-          </li>
-          <li><b>Backend</b>
-            <ul>
-              <li><b>pyramid</b>: Framework web Python (backend utama).</li>
-              <li><b>pyramid_jinja2</b>: Integrasi template engine Jinja2.</li>
-              <li><b>sqlalchemy</b>: ORM untuk database.</li>
-              <li><b>alembic</b>: Migrasi database.</li>
-              <li><b>waitress</b>: Server WSGI produksi.</li>
-              <li><b>pytest</b>: Framework testing backend.</li>
-            </ul>
-          </li>
+
+        <h3 data-aos="fade-right">👨‍💼 Modul Admin</h3>
+        <ul data-aos="fade-left">
+          <li><b>Autentikasi Admin:</b> Login session, hanya admin dapat mengakses data pegawai dan pajak.</li>
+          <li><b>Data Pegawai:</b> CRUD NIP, nama, golongan, status PTKP.</li>
+          <li><b>Komponen Gaji & Pajak:</b> Input gaji pokok, tunjangan, pembulatan, TPP, THR, Gaji 13, dan hitung otomatis pajak.</li>
+          <li><b>Laporan:</b> Export PDF/Excel bulanan & tahunan untuk pegawai & semua data.</li>
         </ul>
 
-        <h3>Cara Menjalankan</h3>
-        <ul>
-          <li><b>Backend</b>
-            <ul>
-              <li>Pastikan Python 3 sudah terinstall.</li>
-              <li>Buat virtual environment (opsional):<br>
-                <code>python -m venv venv</code><br>
-                <code>source venv/bin/activate</code> (Linux/macOS)<br>
-                <code>venv\Scripts\activate</code> (Windows)
-              </li>
-              <li>Install dependensi:<br>
-                <code>pip install pyramid pyramid_jinja2 sqlalchemy alembic waitress pytest</code>
-              </li>
-              <li>Migrasi database (jika pakai Alembic):<br>
-                <code>alembic upgrade head</code>
-              </li>
-              <li>Jalankan backend:<br>
-                <code>pserve development.ini --reload</code>
-              </li>
-            </ul>
-          </li>
-          <li><b>Frontend</b>
-            <ul>
-              <li>Pastikan Node.js & npm/yarn sudah terinstall.</li>
-              <li>Masuk ke folder frontend:<br>
-                <code>cd src</code>
-              </li>
-              <li>Install dependensi:<br>
-                <code>npm install</code> atau <code>yarn install</code>
-              </li>
-              <li>Jalankan frontend:<br>
-                <code>npm start</code> atau <code>yarn start</code>
-              </li>
-              <li>Buka <code>http://localhost:3000</code> di browser.</li>
-            </ul>
-          </li>
+        <h3 data-aos="fade-right">👤 Modul Pengguna (Pegawai)</h3>
+        <ul data-aos="fade-left">
+          <li><b>Registrasi:</b> Validasi NIP dari database admin.</li>
+          <li><b>Login & Dashboard:</b> Melihat laporan pajak pribadi per bulan & tahun.</li>
+          <li><b>Fitur Export:</b> Unduh laporan PDF bulanan & tahunan.</li>
+          <li><b>Edit Profil & Password:</b> Pegawai bisa mengelola akun sendiri.</li>
         </ul>
 
-        <h3>Fitur Utama</h3>
-        <ul>
-          <li>Autentikasi & login user/admin</li>
-          <li>Dashboard terpisah untuk admin & user</li>
-          <li>Manajemen buku lengkap (CRUD)</li>
-          <li>Peminjaman buku online & pengelolaan peminjaman oleh admin</li>
-          <li>Daftar favorit buku untuk user</li>
-          <li>Laporan peminjaman untuk admin</li>
+        <h3 data-aos="fade-right">🧠 Alur Perhitungan Pajak</h3>
+        <pre data-aos="zoom-in"><code>
+$bruto = $gaji_pokok + $tunj_jabatan + $tunj_lainnya;
+$golongan = getGolonganTER($status, $bruto);
+$tarif_TER = getTER($golongan, $status);
+$pajak_bulanan = $bruto * $tarif_TER / 100;
+$pajak_tahunan = $pajak_bulanan * 12;
+        </code></pre>
+
+        <h3 data-aos="fade-right">🧾 Struktur Database</h3>
+        <ul data-aos="fade-left">
+          <li><b>pegawai:</b> Data pegawai & PTKP</li>
+          <li><b>pajak:</b> Komponen penghasilan dan hasil perhitungan</li>
+          <li><b>arsip:</b> Riwayat laporan PDF yang diunduh</li>
+          <li><b>users:</b> Akun login pengguna (pegawai)</li>
         </ul>
 
-        <h3>Testing Backend</h3>
-        <ul>
-          <li>Jalankan pengujian backend dari direktori backend:<br>
-            <code>pytest</code>
-          </li>
+        <h3 data-aos="fade-right">🧪 Unit Testing</h3>
+        <ul data-aos="fade-left">
+          <li>Uji logika perhitungan</li>
+          <li>Validasi form & export PDF</li>
         </ul>
 
-        <!-- Link Proyek dipindahkan ke bawah di atas tombol kembali -->
-        <div class="mb-3 mt-4">
-          <h3>Link Proyek</h3>
-          <a href="https://github.com/ayuputrr/UAS_MAULINAAYU_122140080_PEMWEB_RA" class="btn btn-primary btn-sm" target="_blank">Lihat Kode di GitHub</a>
-                  </div>
-        <a href="projects.html" class="btn btn-outline-info btn-sm">&larr; Kembali ke Proyek</a>
+        <h3 data-aos="fade-right">🔧 Teknologi yang Digunakan</h3>
+        <ul data-aos="fade-left">
+          <li>PHP 8.x</li>
+          <li>CodeIgniter 4</li>
+          <li>MySQL/MariaDB</li>
+          <li>Bootstrap 5</li>
+          <li>Dompdf (untuk export PDF)</li>
+        </ul>
+
+        <h3 data-aos="fade-right">💡 Rencana Pengembangan</h3>
+        <ul data-aos="fade-left">
+          <li>Modul presensi berbasis lokasi (GPS)</li>
+          <li>Mobile app (Flutter / Android)</li>
+          <li>QR Code untuk e-sign laporan</li>
+          <li>Arsip otomatis ke Google Drive</li>
+        </ul>
+
+        <div class="mb-3" data-aos="fade-up">
+          <a href="https://github.com/ayuputrr/Aplikasi-Perhitungan-Pajak" class="btn btn-primary btn-sm" target="_blank">Lihat Kode</a>
+         
+        </div>
+        <a href="projects.html" class="btn btn-outline-info btn-sm" data-aos="fade-left">&larr; Kembali ke Proyek</a>
       </div>
     </div>
   </section>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
