@@ -3,15 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aplikasi Perhitungan Pajak Pegawai - Detail Proyek</title>
-
-  <!-- Bootstrap 5 CSS -->
+  <title>Pustaka-App - Detail Proyek</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  
-  <!-- AOS (Animate On Scroll) CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
   <style>
@@ -24,11 +18,6 @@
       --glass-border: rgba(34,211,238,0.13);
       --shadow: 0 8px 32px 0 rgba(30,41,59,0.18);
     }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(120deg, #1e293b 0%, #334155 60%, #0f172a 100%);
@@ -37,38 +26,32 @@
       color: var(--white);
       min-height: 100vh;
     }
-
     @keyframes gradientFlow {
       0% {background-position:0% 50%;}
       50% {background-position:100% 50%;}
       100% {background-position:0% 50%;}
     }
-
     .navbar {
       background: var(--glass-bg) !important;
       backdrop-filter: blur(10px);
       box-shadow: var(--shadow);
     }
-
     .navbar-brand, .nav-link {
       color: var(--accent) !important;
       font-weight: 700;
       letter-spacing: 1px;
       font-size: 1.12rem;
     }
-
-    .nav-link.active, .nav-link:hover, .nav-link:focus {
+    .nav-link.active, .nav-link:hover {
       color: var(--white) !important;
       background: var(--accent);
       border-radius: 20px;
       transition: background .3s, color .3s;
     }
-
     .project-detail-section {
       padding: 2rem 0 1.5rem 0;
       min-height: 90vh;
     }
-
     .project-title {
       color: var(--accent);
       font-size: 2.1rem;
@@ -77,17 +60,13 @@
       margin-bottom: 1.2rem;
       text-align: center;
     }
-
     .project-image {
       max-width: 100%;
       border-radius: 16px;
       box-shadow: 0 6px 32px var(--secondary);
-      margin-bottom: 2rem;
+      margin: 0 auto 2rem auto;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
     }
-
     .project-info {
       background: var(--glass-bg);
       border-radius: 18px;
@@ -99,30 +78,24 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     .project-info h3 {
       color: var(--accent);
       font-weight: 600;
       margin-bottom: 1rem;
       font-size: 1.1rem;
     }
-
     .project-info ul {
       padding-left: 1.2rem;
       margin-bottom: 1.2rem;
       font-size: 0.97rem;
     }
-
-    pre code {
-      font-size: 0.9rem;
+    .project-info code {
+      color: #22d3ee;
       background: #1e293b;
-      padding: 1rem;
-      display: block;
-      border-radius: 10px;
-      color: #a6e3e9;
-      overflow-x: auto;
+      border-radius: 4px;
+      padding: 2px 5px;
+      font-size: 0.95em;
     }
-
     .btn-primary, .btn-outline-info {
       font-weight: 600;
       letter-spacing: 0.5px;
@@ -131,36 +104,31 @@
       padding: 0.45rem 1.2rem;
       border-radius: 24px;
     }
-
     .btn-primary {
       background: var(--accent);
       border: none;
       color: var(--primary);
     }
-
     .btn-primary:hover {
       background: var(--white);
       color: var(--accent);
     }
-
     .btn-outline-info {
       color: var(--accent);
       border-color: var(--accent);
     }
-
     .btn-outline-info:hover {
       background: var(--accent);
       color: var(--primary);
-      border-color: var(--accent);
     }
-
     @media (max-width: 700px) {
-      .project-title { font-size: 1.3rem; }
-      .project-info { padding: 1.1rem; }
+      .project-title { font-size: 1.4rem; }
+      .project-info { padding: 1.2rem; }
     }
   </style>
 </head>
 <body>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
     <div class="container">
@@ -182,88 +150,58 @@
   <!-- Project Detail Section -->
   <section class="project-detail-section">
     <div class="container">
-      <h1 class="project-title" data-aos="fade-down">Aplikasi Perhitungan Pajak Pegawai Pringsewu</h1>
-      <img src="aset/pajak.png" alt="Aplikasi Perhitungan Pajak Pegawai" class="project-image" data-aos="zoom-in" />
-      
+      <h1 class="project-title" data-aos="fade-up">Pustaka-App 📚</h1>
+      <img src="aset/pustakadigital.png" alt="Pustaka-App Aplikasi Peminjaman Buku" class="project-image" data-aos="zoom-in" />
+
       <div class="project-info" data-aos="fade-up">
-        <h3 data-aos="fade-right">📘 Deskripsi Aplikasi</h3>
+        <h3 data-aos="fade-right">Deskripsi Proyek</h3>
         <p>
-          Sistem Informasi Perhitungan Pajak Pegawai Kabupaten Pringsewu adalah aplikasi berbasis web yang dikembangkan dengan framework <b>CodeIgniter 4</b>. Tujuannya adalah untuk menghitung, mengelola, dan menyimpan data pajak penghasilan PPh 21 bagi pegawai ASN secara otomatis dan efisien.
+          <b>Pustaka-App</b> adalah aplikasi web peminjaman buku <i>fullstack</i> yang menggunakan React di frontend dan Pyramid di backend. Aplikasi ini memudahkan pengguna untuk meminjam buku secara online, dengan pengelolaan data buku dan peminjaman oleh admin dan user.
         </p>
-
-        <h3 data-aos="fade-right">👨‍💼 Modul Admin</h3>
+        
+        <h3 data-aos="fade-right">Dependensi Paket</h3>
         <ul data-aos="fade-left">
-          <li><b>Autentikasi Admin:</b> Login session, hanya admin dapat mengakses data pegawai dan pajak.</li>
-          <li><b>Data Pegawai:</b> CRUD NIP, nama, golongan, status PTKP.</li>
-          <li><b>Komponen Gaji & Pajak:</b> Input gaji pokok, tunjangan, pembulatan, TPP, THR, Gaji 13, dan hitung otomatis pajak.</li>
-          <li><b>Laporan:</b> Export PDF/Excel bulanan & tahunan untuk pegawai & semua data.</li>
+          <li><b>Frontend:</b> react, react-router-dom, axios, testing-library, web-vitals</li>
+          <li><b>Backend:</b> pyramid, pyramid_jinja2, sqlalchemy, alembic, waitress, pytest</li>
         </ul>
 
-        <h3 data-aos="fade-right">👤 Modul Pengguna (Pegawai)</h3>
+        <h3 data-aos="fade-right">Cara Menjalankan</h3>
         <ul data-aos="fade-left">
-          <li><b>Registrasi:</b> Validasi NIP dari database admin.</li>
-          <li><b>Login & Dashboard:</b> Melihat laporan pajak pribadi per bulan & tahun.</li>
-          <li><b>Fitur Export:</b> Unduh laporan PDF bulanan & tahunan.</li>
-          <li><b>Edit Profil & Password:</b> Pegawai bisa mengelola akun sendiri.</li>
+          <li><b>Backend:</b> pip install & run dengan <code>pserve development.ini --reload</code></li>
+          <li><b>Frontend:</b> npm install lalu <code>npm start</code> (di folder src)</li>
         </ul>
 
-        <h3 data-aos="fade-right">🧠 Alur Perhitungan Pajak</h3>
-        <pre data-aos="zoom-in"><code>
-$bruto = $gaji_pokok + $tunj_jabatan + $tunj_lainnya;
-$golongan = getGolonganTER($status, $bruto);
-$tarif_TER = getTER($golongan, $status);
-$pajak_bulanan = $bruto * $tarif_TER / 100;
-$pajak_tahunan = $pajak_bulanan * 12;
-        </code></pre>
-
-        <h3 data-aos="fade-right">🧾 Struktur Database</h3>
+        <h3 data-aos="fade-right">Fitur Utama</h3>
         <ul data-aos="fade-left">
-          <li><b>pegawai:</b> Data pegawai & PTKP</li>
-          <li><b>pajak:</b> Komponen penghasilan dan hasil perhitungan</li>
-          <li><b>arsip:</b> Riwayat laporan PDF yang diunduh</li>
-          <li><b>users:</b> Akun login pengguna (pegawai)</li>
+          <li>Login user & admin</li>
+          <li>Dashboard terpisah</li>
+          <li>CRUD buku</li>
+          <li>Peminjaman & manajemen peminjaman</li>
+          <li>Favorit buku</li>
+          <li>Laporan admin</li>
         </ul>
 
-        <h3 data-aos="fade-right">🧪 Unit Testing</h3>
+        <h3 data-aos="fade-right">Testing Backend</h3>
         <ul data-aos="fade-left">
-          <li>Uji logika perhitungan</li>
-          <li>Validasi form & export PDF</li>
+          <li>Jalankan dari direktori backend: <code>pytest</code></li>
         </ul>
 
-        <h3 data-aos="fade-right">🔧 Teknologi yang Digunakan</h3>
-        <ul data-aos="fade-left">
-          <li>PHP 8.x</li>
-          <li>CodeIgniter 4</li>
-          <li>MySQL/MariaDB</li>
-          <li>Bootstrap 5</li>
-          <li>Dompdf (untuk export PDF)</li>
-        </ul>
-
-        <h3 data-aos="fade-right">💡 Rencana Pengembangan</h3>
-        <ul data-aos="fade-left">
-          <li>Modul presensi berbasis lokasi (GPS)</li>
-          <li>Mobile app (Flutter / Android)</li>
-          <li>QR Code untuk e-sign laporan</li>
-          <li>Arsip otomatis ke Google Drive</li>
-        </ul>
-
-        <div class="mb-3" data-aos="fade-up">
-          <a href="https://github.com/ayuputrr/Aplikasi-Perhitungan-Pajak" class="btn btn-primary btn-sm" target="_blank">Lihat Kode</a>
-         
+        <div class="mb-3 mt-4" data-aos="zoom-in">
+          <h3>Link Proyek</h3>
+          <a href="https://github.com/ayuputrr/UAS_MAULINAAYU_122140080_PEMWEB_RA" class="btn btn-primary btn-sm" target="_blank">Lihat Kode di GitHub</a>
         </div>
-        <a href="projects.html" class="btn btn-outline-info btn-sm" data-aos="fade-left">&larr; Kembali ke Proyek</a>
+        <a href="projects.html" class="btn btn-outline-info btn-sm" data-aos="fade-up">&larr; Kembali ke Proyek</a>
       </div>
     </div>
   </section>
 
-  <!-- Bootstrap JS -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
       duration: 1000,
-      once: true
+      once: true,
     });
   </script>
 </body>
